@@ -3,23 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CE81DF79266CD54000150556 /* tvOS_MADApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81DF78266CD54000150556 /* tvOS_MADApp.swift */; };
 		CE81DF7B266CD54000150556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81DF7A266CD54000150556 /* ContentView.swift */; };
-		CE81DF7D266CD54000150556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE81DF7C266CD54000150556 /* Assets.xcassets */; };
 		CE81DF80266CD54000150556 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE81DF7F266CD54000150556 /* Preview Assets.xcassets */; };
+		CE81DF8A266CD61100150556 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE81DF89266CD61100150556 /* Alamofire */; };
+		CE81DF8E266CD66C00150556 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE81DF8D266CD66C00150556 /* SwiftyJSON */; };
+		CE81DF92266CD77600150556 /* SingInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81DF91266CD77600150556 /* SingInView.swift */; };
+		CE81DF97266CD7E600150556 /* ViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81DF96266CD7E600150556 /* ViewModal.swift */; };
+		CE81DF9C266CE6B900150556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE81DF9B266CE6B900150556 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE81DF75266CD54000150556 /* tvOS-MAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS-MAD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE81DF78266CD54000150556 /* tvOS_MADApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOS_MADApp.swift; sourceTree = "<group>"; };
 		CE81DF7A266CD54000150556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE81DF7C266CD54000150556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE81DF7F266CD54000150556 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE81DF81266CD54000150556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE81DF91266CD77600150556 /* SingInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInView.swift; sourceTree = "<group>"; };
+		CE81DF96266CD7E600150556 /* ViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModal.swift; sourceTree = "<group>"; };
+		CE81DF9B266CE6B900150556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE81DF8E266CD66C00150556 /* SwiftyJSON in Frameworks */,
+				CE81DF8A266CD61100150556 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				CE81DF78266CD54000150556 /* tvOS_MADApp.swift */,
+				CE81DF9B266CE6B900150556 /* Assets.xcassets */,
 				CE81DF7A266CD54000150556 /* ContentView.swift */,
-				CE81DF7C266CD54000150556 /* Assets.xcassets */,
+				CE81DF95266CD7AC00150556 /* ViewModal */,
+				CE81DF90266CD6B300150556 /* View */,
 				CE81DF81266CD54000150556 /* Info.plist */,
 				CE81DF7E266CD54000150556 /* Preview Content */,
 			);
@@ -67,6 +77,22 @@
 				CE81DF7F266CD54000150556 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE81DF90266CD6B300150556 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE81DF91266CD77600150556 /* SingInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE81DF95266CD7AC00150556 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				CE81DF96266CD7E600150556 /* ViewModal.swift */,
+			);
+			path = ViewModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +111,10 @@
 			dependencies = (
 			);
 			name = "tvOS-MAD";
+			packageProductDependencies = (
+				CE81DF89266CD61100150556 /* Alamofire */,
+				CE81DF8D266CD66C00150556 /* SwiftyJSON */,
+			);
 			productName = "tvOS-MAD";
 			productReference = CE81DF75266CD54000150556 /* tvOS-MAD.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +142,10 @@
 				Base,
 			);
 			mainGroup = CE81DF6C266CD54000150556;
+			packageReferences = (
+				CE81DF88266CD61100150556 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE81DF8C266CD66C00150556 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CE81DF76266CD54000150556 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE81DF9C266CE6B900150556 /* Assets.xcassets in Resources */,
 				CE81DF80266CD54000150556 /* Preview Assets.xcassets in Resources */,
-				CE81DF7D266CD54000150556 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE81DF7B266CD54000150556 /* ContentView.swift in Sources */,
+				CE81DF92266CD77600150556 /* SingInView.swift in Sources */,
+				CE81DF97266CD7E600150556 /* ViewModal.swift in Sources */,
 				CE81DF79266CD54000150556 /* tvOS_MADApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +362,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE81DF88266CD61100150556 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		CE81DF8C266CD66C00150556 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE81DF89266CD61100150556 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE81DF88266CD61100150556 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CE81DF8D266CD66C00150556 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE81DF8C266CD66C00150556 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE81DF6D266CD54000150556 /* Project object */;
 }
